@@ -119,7 +119,7 @@ namespace MSR.CVE.BackMaker.ImagePipeline
                                 System.Drawing.Imaging.PixelFormat.Format32bppArgb);
                             try
                             {
-                                IntPtr buffer = new IntPtr(bitmapData.Scan0.ToInt32() +
+                                IntPtr buffer = new IntPtr(bitmapData.Scan0.ToInt64() +
                                                            int32Rect.Y * bitmapData.Stride + int32Rect.X * 4);
                                 bitmapSource.CopyPixels(
                                     new Int32Rect(0, 0, bitmapSource.PixelWidth, bitmapSource.PixelHeight),
